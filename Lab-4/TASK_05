@@ -1,0 +1,45 @@
+#include <stdio.h>
+int main()
+{
+    int optn;
+    int b, x;
+    printf("Enter your current balance: ");
+    scanf("%d", &b);
+    while(optn != 4)
+    {
+        printf("\nMain Menu:\n");
+        printf("1. Balance Inquiry\n");
+        printf("2. Cash Withdrawal\n");
+        printf("3. Deposit\n");
+        printf("4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &optn);
+        switch(optn)
+        {
+            case 1:
+                printf("Balance Inquiry:\n");
+                printf("Your current balance is: %d\n", b);
+                break;
+            case 2:
+                printf("Cash Withdrawal:\n");
+                printf("Enter amount to withdraw: ");
+                scanf("%d", &x);
+                b = b - x;
+                printf("Updated balance: %d\n", b);
+                break;
+            case 3:
+                printf("Deposit:\n");
+                printf("Enter amount to deposit: ");
+                scanf("%d", &x);
+                b = b + x;
+                printf("Updated balance: %d\n", b);
+                break;
+            case 4:
+                printf("Exit\n");
+                break;
+            default:
+                printf("Invalid input\n");
+        }
+    }
+    return 0;
+}
