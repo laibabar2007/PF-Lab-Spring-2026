@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+float attendance;
+printf("Enter the percentage of attendance");
+scanf("%f",&attendance);
+    if(attendance>=75)
+    {
+printf("Eligible for exam");
+}
+else
+{
+printf("Not Eligible for exam");
+    }
+return 0;
+}
