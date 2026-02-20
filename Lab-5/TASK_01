@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+double cgpa;
+int familyIncome;
+printf("Enter your CGPA:\n");
+scanf("%lf",&cgpa);
+printf("Enter your Family Income:\n");
+scanf("%d",&familyIncome);
+if(cgpa>=3.5)
+{
+if(familyIncome<50,000)
+{
+printf("100%% Scholarship is given\n");
+}
+else
+{
+printf("50%% Scholarship is given\n");
+}
+}
+else
+{
+if(cgpa>=3.0&&familyIncome<40,000)
+{
+printf("25%% Scholar ship given \n");
+}
+else
+{
+printf("No scholarship");
+}} return 0; }
