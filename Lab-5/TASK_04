@@ -1,0 +1,62 @@
+#include <stdio.h>
+int main()
+{
+    int category, item, quantity;
+    float totalBill;
+    printf("Restaurant Menu:\n");
+    printf("1. Fast Food\n");
+    printf("2. Desi Food\n");
+    printf("Enter your choice: ");
+    scanf("%d", &category);
+    switch (category)
+    {
+        case 1:
+            printf("\nFast Food Menu:\n");
+            printf("1. Burger(Rs.500)\n");
+            printf("2. Pizza(Rs.1200)\n");
+            printf("Enter your choice: ");
+            scanf("%d", &item);
+            printf("Enter quantity: ");    
+            scanf("%d", &quantity);
+            switch (item)
+            {
+                case 1:
+                    totalBill=quantity*500;
+                    printf("You selected Burger\n");  break;
+                case 2:
+                    totalBill=quantity*1200;
+                    printf("You selected Pizza\n");
+                    break;
+                default:
+                    printf("Invalid item choice!\n");
+                    return 0;
+            }  break;
+        case 2:  
+            printf("\nDesi Food Menu:\n");
+            printf("1. Biryani(Rs.350)\n");
+            printf("2. Karahi(Rs.1500)\n");
+            printf("Enter your choice: ");
+            scanf("%d", &item);
+            printf("Enter quantity: ");
+            scanf("%d", &quantity);
+            switch (item)
+            {
+                case 1:
+                    totalBill=quantity*350;
+                    printf("You selected Biryani\n");
+                    break;
+                case 2:
+                    totalBill=quantity*1500;
+                    printf("You selected Karahi\n");
+                    break;
+                default:
+                    printf("Invalid choice!\n");
+                    return 0;
+            } break;
+        default:
+            printf("Invalid choice!\n");
+            return 0;
+    }
+    printf("\nTotal Bill = Rs. %.2f\n", totalBill);
+    return 0;
+}
