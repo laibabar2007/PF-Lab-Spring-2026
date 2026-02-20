@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+    float salary,bonus;
+    int serviceYears;
+    printf("Enter employee salary:");
+    scanf("%f",&salary);
+    printf("Enter years of service:");
+    scanf("%d",&serviceYears);
+    bonus=(serviceYears>10)?(0.30*salary):(serviceYears>5)?(0.20*salary):(0.10*salary);
+    printf("Bonus Amount=Rs %.2f\n",bonus);
+    return 0;
+}
