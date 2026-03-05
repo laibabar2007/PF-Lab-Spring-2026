@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+    int pin;
+    printf("Pin Verification System\n");
+    printf("Enter your Pin : ");
+    scanf("%d",&pin);
+    while(pin!=6978)
+    {
+        printf("Incorrect PIN! Try again.\n");
+        printf("Enter your PIN : ");
+        scanf("%d",&pin);
+    }
+    printf("Access Granted!\n");
+    return 0;
+}
