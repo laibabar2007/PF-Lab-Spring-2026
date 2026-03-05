@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main()
+{  int i,status,total = 0;
+    printf("Enter 1 if member checked in otherwise enter 0\n");
+    for(i=1;i<=25;i++)
+    {  printf("Enter check in status of member %d : ",i);
+        scanf("%d",&status);
+        if(status==1)
+        {  total=total+1; } }
+    printf("\nTotal members checked in today is : %d\n", total);
+    return 0;
+}
