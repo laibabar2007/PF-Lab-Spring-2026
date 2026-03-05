@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+    int score,hp=0,mp=0,lp=0;
+    printf("Enter employee performance scores (0-100), -1 to stop:\n");
+    scanf("%d", &score);
+    while(score != -1)
+    {
+        if(score >= 85)
+        {
+            hp++;
+        }
+        else if(score >= 60 && score <= 84)
+        {
+            mp++;
+        }
+        else if(score >= 0 && score < 60)
+        {
+            lp++;
+        }
+        else
+        {
+            printf("Invalid score! Enter between 0 and 100.\n");
+        }
+
+        printf("Enter next score (-1 to stop): ");
+        scanf("%d", &score);
+    }
+    printf("\nPerformance Classification Summary:\n");
+    printf("Excellent: %d\n",hp);
+    printf("Satisfactory: %d\n",mp);
+    printf("Needs Improvement: %d\n",lp);
+    return 0;
+}
