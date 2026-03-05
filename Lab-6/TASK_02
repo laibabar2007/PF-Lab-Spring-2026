@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+    int dataBalance,usage;
+    printf("Enter your available internet data in MB : ");
+    scanf("%d",&dataBalance);
+    while(dataBalance>0)
+    {
+        printf("Enter data usage in MB : ");
+        scanf("%d",&usage);
+        dataBalance= dataBalance-usage;
+        printf("Remaining data balance is : %d MB\n",dataBalance);
+    }
+    printf("\nYour internet data has finished");
+    return 0;
+}
