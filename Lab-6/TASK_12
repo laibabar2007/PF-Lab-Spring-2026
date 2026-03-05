@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+    int x=70,choice;
+    printf("Parking Lot Management System\n");
+    while(x>0)
+    {
+        printf("Press 1 to park a car or 0 to stop: ");
+        scanf("%d",&choice);
+        if(choice==0)
+        {
+            printf("Stopping early as requested.\n");
+            break;
+        }
+        else if(choice == 1)
+        {
+            x--;
+            printf("Car is parked successfully.\n");
+            printf("Remaining parking spaces are: %d\n", x);
+        }
+        else
+        {
+            printf("Invalid input! Please enter 1 to park or 0 to stop.\n");
+        }
+    }
+    if(x==0)
+    {
+        printf("\nParking lot is full! No more spaces available.\n");
+    }
+    printf("Parking session ended!\n");
+    return 0;
+}
