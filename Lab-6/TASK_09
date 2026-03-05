@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+    int i,tickets,total = 0;
+    printf("Enter number of VIP tickets sold : ");
+    scanf("%d",&tickets);
+    for(i=1;i<=tickets;i++)
+    {
+        total=total+(i*100);
+    }
+    printf("Total revenue collected from %d tickets is: $%d\n", tickets, total);
+    return 0;
+}
