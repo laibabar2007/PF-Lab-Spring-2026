@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+    float price,total = 0;
+    int items;
+    printf("Restaurant Billing System\n");
+    do {
+        printf("Enter the price of item: ");
+        scanf("%f", &price);
+        total=total+price;
+        printf("Do u want to add something else (Enter 1 for yes and 0 for no): ");
+        scanf("%d",&items);
+    } while(items == 1);
+    if(total>3000)
+    {
+        total = total-(total * 0.10); 
+        printf("You got a 10%% discount.\n");   }
+    printf("Total payable amount: %.2f\n", total);
+    return 0;
+}
