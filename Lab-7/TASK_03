@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main(){
+int qM[10],pM[10],fM[10],i,pC=0,fC=0,pS=0,fS=0;
+float pA,fA;
+printf("Enter quiz marks out of (0 to 10) and you can also enter (-1) to stop:\n");
+for(i=0;i<10;i++)
+{ scanf("%d",&qM[i]);
+if(qM[i]==-1)
+break;
+if(qM[i]>=5 && qM[i]<=10)
+{ pM[pC]=qM[i];
+pS+=pM[pC];
+pC++; }
+else if(qM[i]>=0 && qM[i]<5)
+{ fM[fC]=qM[i];
+fS+=fM[fC];
+fC++; } }
+printf("The Passing marks are:\n");
+for(i=0;i<pC;i++)
+{ printf("%d ",pM[i]); }
+printf("\nThe Failing marks are:\n");
+for(i=0;i<fC;i++)
+{ printf("%d ",fM[i]); }
+if(pC>0)
+{ pA=(float)pS/pC;
+printf("\nAverage of pass marks: %.2f",pA); }
+if(fC>0)
+{ fA=(float)fS/fC;
+printf("\nAverage of fail marks: %.2f",fA); }
+return 0;
+}
