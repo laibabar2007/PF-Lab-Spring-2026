@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main(){
+int marks[4][3],i,j,total[4]={0};
+float avg[3]={0};
+printf("Enter the marks of 4 students with 3 subjects each :\n");
+for(i=0;i<4;i++){
+for(j=0;j<3;j++)
+{ scanf("%d",&marks[i][j]); } }
+for(i=0;i<4;i++){
+for(j=0;j<3;j++)
+{ total[i]=total[i]+marks[i][j]; } }
+printf("Total score of individual student:\n");
+for(i=0;i<4;i++)
+{ printf("Student %d= %d\n",i+1,total[i]); }
+for(j=0;j<3;j++){
+for(i=0;i<4;i++)
+{ avg[j]=avg[j]+marks[i][j]; }
+avg[j]=avg[j]/4; }
+printf("\nThe average score of an individual student:\n");
+for(j=0;j<3;j++)
+{ printf("Subject %d= %.2f\n",j+1,avg[j]); }
+return 0;
+}
