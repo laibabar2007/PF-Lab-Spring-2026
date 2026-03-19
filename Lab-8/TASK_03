@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(){
+int temperature[7][3],i,j,max=0,sum,avg;
+printf("Enter temperature for 7 days and 3 times per day (Morning,Afternoon,Night):\n");
+for(i=0;i<7;i++)
+{ for(j=0;j<3;j++)
+{ scanf("%d",&temperature[i][j]); } }
+for(i=0;i<7;i++)
+{ for(j=0;j<3;j++)
+{ if(temperature[i][j]>max)
+{ max=temperature[i][j]; } } }
+printf("Highest temperature in the week = %d\n",max);
+for(i=0;i<7;i++)
+{ sum=0;
+for(j=0;j<3;j++)
+{ sum=sum+temperature[i][j]; }
+avg=sum/3;
+printf("Average temperature of day %d = %d\n",i+1,avg); }
+return 0;
+}
