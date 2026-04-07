@@ -1,0 +1,17 @@
+#include <stdio.h> 
+float toMegajoules(float kwh) 
+{ return kwh*3.6; } 
+float toBTU(float kwh) 
+{ return kwh*3412.14; } 
+float toCalories(float kwh) 
+{ return kwh*859845; } 
+int main(){ 
+float kwh; 
+printf("Enter the value in kWh: "); 
+scanf("%f",&kwh); 
+printf("Value in kWh: %.2f\n",kwh); 
+printf("Value in MJ: %.2f\n",toMegajoules(kwh)); 
+printf("Value in BTU: %.2f\n",toBTU(kwh)); 
+printf("Value in Calories: %.2f\n",toCalories(kwh)); 
+return 0; 
+} 
