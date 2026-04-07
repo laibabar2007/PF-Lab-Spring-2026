@@ -1,0 +1,37 @@
+#include <stdio.h> 
+float applyDiscount(float price,int tier); 
+void printInvoice(float original,float discounted); 
+int main(){ 
+float price,discounted; 
+int tier; 
+printf("Enter original price: "); 
+scanf("%f",&price); 
+printf("Enter membership tier (1-4): "); 
+scanf("%d",&tier); 
+discounted=applyDiscount(price,tier); 
+printInvoice(price,discounted); 
+return 0; 
+} 
+float applyDiscount(float price,int tier){ 
+if(tier==1) 
+return price-(price*0.05); 
+else if(tier==2) 
+return price-(price*0.10); 
+else if(tier==3) 
+return price-(price*0.20); 
+else if(tier==4) 
+return price-(price*0.30); 
+else 
+return price;
+} 
+void printInvoice(float original,float discounted){ 
+float discount=original-discounted; 
+float delivery=0; 
+if(discounted<2000) 
+delivery=150; 
+printf("\n"); 
+printf("Original Price: %.2f\n",original); 
+printf("Discount: %.2f\n",discount); 
+printf("Delivery: %.2f\n",delivery); 
+printf("Final Total: %.2f\n",discounted+delivery); 
+} 
