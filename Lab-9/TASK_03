@@ -1,0 +1,36 @@
+#include <stdio.h> 
+int totalRuns(int arr[10],int n); 
+int highestScore(int arr[10],int n); 
+int aboveAverage(int arr[10],int n,float avg); 
+int main(){ 
+int arr[10],i,total,max,count; 
+float avg; 
+printf("Enter runs for 10 matches:\n"); 
+for(i=0;i<10;i++) 
+scanf("%d",&arr[i]); 
+total=totalRuns(arr,10); 
+avg=(float)total/10; 
+max=highestScore(arr,10); 
+count=aboveAverage(arr,10,avg); 
+printf("Total Runs: %d\n",total); 
+printf("Average Runs: %.2f\n",avg); 
+printf("Highest Score: %d\n",max); 
+printf("Matches above average: %d\n",count); 
+return 0; } 
+int totalRuns(int arr[10],int n){ 
+int sum=0,i; 
+for(i=0;i<n;i++) 
+sum=sum+arr[i];
+return sum; } 
+int highestScore(int arr[10],int n){ 
+int max=arr[0],i; 
+for(i=1;i<n;i++){ 
+if(arr[i]>max) 
+max=arr[i]; } 
+return max; } 
+int aboveAverage(int arr[10],int n,float avg){ 
+int count=0,i; 
+for(i=0;i<n;i++){ 
+if(arr[i]>avg) 
+count++; } 
+return count; }
