@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+char email[100],copy[100],formatted[120]="Email: ";
+char *at,*dot;
+printf("Enter the email: ");
+scanf("%s",email);
+strcpy(copy,email);
+at=strchr(copy,'@');
+dot=strstr(copy,".");
+if(at==NULL||dot==NULL){
+if(at==NULL&&dot==NULL){
+printf("Invalid email address: must contain '@' and '.'\n"); }
+else if(at==NULL){
+printf("Invalid email address: must contain '@'\n"); }
+else
+{ printf("Invalid email address: must contain '.'\n"); }
+return 0; }
+printf("Domain: %s\n",at+1);
+strcat(formatted,copy);
+printf("%s\n",formatted);
+return 0; }
