@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void) {
+    int N;
+    float *temperatures;
+    printf("Enter the number of temperature readings: ");
+    scanf("%d",&N);
+    if (N<=0) 
+    { printf("Number of readings must be positive.\n");
+        return 1; }
+    temperatures=(float*)calloc(N,sizeof(float));
+    if (temperatures==NULL) 
+    {  printf("Memory allocation failed.\n");
+        return 1;  }
+    printf("\nInitial values in the buffer:\n");
+    for (int i=0;i<N;i++) 
+    {  printf("temperatures[%d] = %.2f\n",i,temperatures[i]); }
+    printf("\nEnter %d temperature readings:\n",N);
+    for (int i=0;i<N;i++) 
+    { printf("Reading %d: ",i+1);
+     scanf("%f",&temperatures[i]);  }
+    printf("\nStored temperature readings:\n");
+    for (int i=0;i<N;i++)
+    { printf("temperatures[%d] = %.2f\n",i,temperatures[i]); }
+    free(temperatures);
+    return 0; }
